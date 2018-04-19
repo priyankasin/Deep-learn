@@ -1,3 +1,5 @@
+# convert ubyte files into csv file and also combined image with label of that image
+
 def convert(imgf, labelf, outf, n):
     f = open(imgf, "rb")
     o = open(outf, "w")
