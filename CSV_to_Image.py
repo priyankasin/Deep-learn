@@ -1,3 +1,6 @@
+# convert CSV file into mulltiple class of images.
+
+
 from PIL import Image, ImageDraw
 import numpy as np
 from numpy import genfromtxt
@@ -25,20 +28,10 @@ for img in temp:
 	  
 	# print(new_list)
 	new_list=np.array(new_list)
-	# print(new_list)
-	# im = Image.fromarray(new_list).convert('RGB')
-	# print()
-	# pix = im.load()
-	# rows, cols = im.size
-	# print(rows,cols)
-	# print(label	)
 
-	# for x in range(cols):
-	#     for y in range(rows):
-	#         # print str(x) + " " + str(y)
-	#         pix[x,y] = (int(temp[y,x] // 256 // 256 % 256),int(temp[y,x] // 256  % 256),int(temp[y,x] % 256))
 	file_name = os. path . join ( dst,str(label),str(count)+'.jpg')
 	subject_path= os. path . join ( dst,str(label))
+	# insert image into particular class 
 	if not os.path.exists(subject_path):
 		os.makedirs(subject_path)
 	# im.save(file_name)
